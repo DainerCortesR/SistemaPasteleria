@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="PequeñoSistema.Cards.CardsBuyF4"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:PequeñoSistema.Cards"
+             mc:Ignorable="d" 
+             d:DesignHeight="350" 
+             d:DesignWidth="270" Loaded="UserControl_Loaded">
+    <Border>
+        <Grid>
+            <materialDesign:Card x:Name="CardObj" 
+                         Width="250"
+                         Height="330"
+                         Margin="0">
+                <Grid>
+                    <Image x:Name="ImgContent" 
+                           Width="150"
+                           Height="150"
+                           Stretch="Fill"
+                           VerticalAlignment="Top"
+                           HorizontalAlignment="Left"
+                           Margin="50, 20, 0, 0"
+                           Cursor="Hand" 
+                           MouseEnter="ImgContent_MouseEnter"/>
+                    <Button x:Name="btnView"
+                            Width="150"
+                            Height="150"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Margin="50,20,0,0"
+                            Cursor="Hand"
+                            Background="Black"
+                            Opacity="0.8"
+                            Style="{DynamicResource MaterialDesignFlatMidBgButton}"
+                            materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                            materialDesign:ButtonAssist.CornerRadius="0"
+                            BorderThickness="0" 
+                            MouseLeave="btnView_MouseLeave" Click="btnView_Click">
+                        <materialDesign:PackIcon Kind="TrolleyOutline"
+                                                 Width="40"
+                                                 Height="40"/>
+                    </Button>
+
+                    <TextBlock x:Name="txtNamePas" 
+                               Text="Pastel de unicornio"
+                           HorizontalAlignment="Center"
+                           Margin="0, 190, 0, 0"
+                           FontSize="15"
+                           FontWeight="Bold"/>
+
+                    <TextBlock x:Name="txtPrecio" 
+                               Text="Precio: $ 250000"
+                           HorizontalAlignment="Center"
+                           Margin="0, 220, 0, 0"
+                           FontSize="13"
+                           FontWeight="SemiBold"/>
+
+                    <Button x:Name="btnComprar" 
+                        HorizontalContentAlignment="Left"
+                            Padding="35,0,0,0"
+                        Width="200"
+                        Height="40"
+                        Margin="0, 240, 0, 0"
+                        Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                        materialDesign:ButtonAssist.CornerRadius="5" 
+                            Click="btnComprar_Click">
+                        <WrapPanel>
+                            <TextBlock Text="Agregar al carrito"/>
+                            <materialDesign:PackIcon Kind="TrolleyOutline"
+                                                 Width="20"
+                                                 Height="20"
+                                                 Foreground="White"/>
+                        </WrapPanel>
+                    </Button>
+                </Grid>
+            </materialDesign:Card>
+        </Grid>
+    </Border>
+</UserControl>

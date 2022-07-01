@@ -1,0 +1,61 @@
+﻿<Window x:Class="PequeñoSistema.Mensajes.MensageEntrega"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:PequeñoSistema.Mensajes"
+        mc:Ignorable="d"
+        Title="MensageEntrega"
+        Height="700" 
+        Width="1170"
+        Background="{x:Null}"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Background="{x:Null}">
+        <Grid Height="700" 
+              Width="1170">
+            <Border Background="Black"
+            Opacity="0.5"
+            CornerRadius="20">
+            </Border>
+        </Grid>
+        <Border Background="{DynamicResource MaterialDesignBackground}"
+                CornerRadius="10"
+                Opacity="1"
+                Height="150"
+                Width="300">
+            <Grid>
+                <TextBlock Text="Desea entregar el producto"
+                       Margin="0, 26, 0, 0"
+                       Height="30"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Center"
+                       FontSize="18"
+                       FontWeight="Bold"/>
+
+                <Button x:Name="btnSi" 
+                    Margin="36, 80, 0, 0"
+                    Content="Si" 
+                    Width="80"
+                    HorizontalAlignment="Left"
+                    Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                    materialDesign:ButtonAssist.CornerRadius="5"
+                    Click="btnSi_Click"/>
+
+                <Button x:Name="btnNo" 
+                    Margin="0,80,36, 0"             
+                    Content="No" 
+                    Width="80"
+                    HorizontalAlignment="Right" 
+                    Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                    materialDesign:ButtonAssist.CornerRadius="5"
+                    Click="btnNo_Click"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
